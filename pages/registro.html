@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body id="registro">
+    <!-- Codigo del formulario -->
+    <div class="container"> <!--quiero que este contenedor -->
+        <form class="form" action="../php/registro.php" method="post">
+            <p class="title">Registro de Usuario</p>
+            <p class="message">Regístrese ahora y obtenga acceso completo a nuestra aplicación. </p>
+                    
+            <label for="nombre">
+                <input class="input"  type="text" id="nombre" name="nombre" placeholder="" required>
+                <span>Nombre</span>
+            </label>
+
+            <label  for="correo">
+                <input class="input" type="email" id="correo" name="correo" placeholder="" required>
+                <span>Correo electrónico</span>
+            </label> 
+                
+            <label for="contrasena">
+                <input class="input"   type="password" id="contrasena" name="contrasena" placeholder="" required>
+                <span>Contraseña</span>
+            </label>
+            <!-- <label>
+                <input class="input" type="password" placeholder="" required="">
+                <span>Confirmar contraseña</span>
+            </label> -->
+            <input class="submit" type="submit" value="Registrarse">
+
+            </form>
+       </div>
+
+    <!-- <h1>Registro de Usuario</h1>
+    <form action="registro.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br>
+        
+        <input type="submit" value="Registrarse">
+    </form> -->
+</body>
+</html>

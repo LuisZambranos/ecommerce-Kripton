@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body id="login">
+    <!-- Codigo del formulario -->
+
+   <div class="container"> 
+    <!-- Proceso de php -->
+    <form class="form" action="../php/login.php" method="post">
+        <p class="title">Iniciar sesión</p>
+        <p class="message">Regístrese ahora y obtenga acceso completo a nuestra aplicación. </p>
+                
+        <label for="correo">
+            <input class="input"  type="email" id="correo" name="correo" placeholder="" required>
+            <span>Email</span>
+        </label> 
+        
+        <label for="contrasena">
+            <input class="input" type="password" id="contrasena" name="contrasena" placeholder="" required>
+            <span>Contraseña</span>
+        </label>
+        <input class="submit" type="submit" value="Iniciar sesión">
+        
+    <div class="p-cuenta">
+        <label>¿Aún no tienes una cuenta? Crea una.</label>
+    </div>
+
+    <button class="crear-cuenta" onclick="crearCuenta(event)">Crear Cuenta</button>
+    </form>
+</div>
+
+    <script src="../js/script_funcionLogin.js"></script>
+</body>
+</html>
