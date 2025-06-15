@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Lista de productos
+  console.log("🟢 script.js cargado y DOM listo");
+
   const products = [
     { id: 1, name: 'Musculosa Abierta "White Shark" - Blanca', price: 20, image: '/ecommerce-Kripton/assets/images/musculosa-shark-blanca.webp' },
     { id: 2, name: 'Musculosa Abierta "Basic-Shark" Negra', price: 20, image: '/ecommerce-Kripton/assets/images/musculosa-shark.webp' },
@@ -9,17 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 6, name: 'Sudadera Oversize "Patch" - Crudo', price: 35, image: '/ecommerce-Kripton/assets/images/sudadera-blanca.webp' },
   ];
 
-  // Captura de elementos
   const productList  = document.getElementById('product-list');
   const cartCount    = document.getElementById('cart-count');
   const searchInput  = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
   const noResults    = document.getElementById('no-results');
 
-
-  // Función para mostrar productos
   function renderProducts(lista = products) {
     productList.innerHTML = '';
+
     if (lista.length === 0) {
       noResults.style.display = 'block';
       return;
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mostrar todos al cargar
   renderProducts();
 
-  // Lógica de búsqueda
+  // Función de búsqueda reutilizable
   function handleSearch() {
     const term = searchInput.value.toLowerCase().trim();
 
@@ -65,15 +64,45 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts(resultados);
   }
 
-  // Conectar el botón a la búsqueda
-  searchButton.addEventListener('click', () => {
-    console.log("👆 click en searchButton");
-    handleSearch();
+  // Click en botón
+  searchButton.addEventListener('click', handleSearch);
+
+  // Presionar Enter en el input también dispara búsqueda
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
   });
 
   // Función global para añadir al carrito
   window.addToCart = function(productId) {
-    const prev = parseInt(cartCount.innerText);
-    cartCount.innerText = prev + 1;
+    let count = parseInt(cartCount.innerText);
+    cartCount.innerText = ++count;
   };
+});
+
+
+// Funcion para el ocultar y mostrar el carrito de compras
+// Obtener elementos
+const cartIcon = document.getElementById("cart");
+const drawer = document.getElementById("cart-drawer");
+const backdrop = document.getElementById("cart-drawer-backdrop");
+const closeBtn = document.getElementById("cart-drawer-close");
+
+// Mostrar el drawer
+cartIcon.addEventListener("click", () => {
+  drawer.classList.add("show");
+  backdrop.classList.remove("hidden");
+});
+
+// Cerrar el drawer
+closeBtn.addEventListener("click", () => {
+  drawer.classList.remove("show");
+  backdrop.classList.add("hidden");
+});
+
+// También cerrar al hacer clic en el fondo oscuro
+backdrop.addEventListener("click", () => {
+  drawer.classList.remove("show");
+  backdrop.classList.add("hidden");
 });
