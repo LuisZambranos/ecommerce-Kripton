@@ -23,21 +23,16 @@
     <!-- Branding personalizado -->
     <header class="py-3 bg-dark text-white text-center">
         <div class="bar-nav d-flex justify-content-around align-items-center">
-            <a href="https://www.instagram.com/kripton.fitness?igsh=MXY5aWU0ZGMwM3I1cg==">
-                <img id="instagram" src="../assets/icons/logotipo-de-instagram.png" alt="Instagram" width="32">
-            </a>
-
-            <h4 class="krip m-0">Kripton</h4>
-            <h1 class="Kripton m-0 title">Kripton</h1>
-            <h4 class="krip m-0">Kripton</h4>
-
+            <h4 class="krip">Kripton</h4>
+            <h1 class="kripton-title">Kripton</h1>
+            <h4 class="krip">Kripton</h4>
         </div>
+
     </header>
 
     <!-- Navbar Bootstrap con búsqueda -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,17 +41,28 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a class="navbar-brand" href="#">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item">
                         <a class="nav-link active" href="#">Tienda</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Categorías</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
+                    <a href="https://www.instagram.com/kripton.fitness?igsh=MXY5aWU0ZGMwM3I1cg==" target="_blank">
+                        <img id="instagram" src="../assets/icons/logotipo-de-instagram.png" alt="Instagram">
+                    </a>
                 </ul>
-                <!-- Dentro de tu <nav> existente, reemplaza el form por esto: -->
-                <div class="d-flex" role="search">
+            </div>
+
+            <!-- Buscador de productos -->
+            <div class="search-bar d-flex" role="search">
                     <input
                         id="search-input"
                         class="form-control me-2"
@@ -72,7 +78,6 @@
                         Buscar
                     </button>
                 </div>
-            </div>
 
             <div id="cart" class="cart d-flex align-items-center gap-2">
                 <img id="carro" src="../assets/icons/carro-de-la-compra.png" alt="carrito" width="32">
@@ -119,19 +124,19 @@
 
     <div class="banner">
         <div class="metodo-pago">
-            <img id="img-footer" src="../assets/icons/metodo-de-pago.png" alt="">
+            <img class="img-footer" src="../assets/icons/metodo-de-pago.png" alt="">
             <h2>CUOTAS SIN INTERES</h2>
             <h5>15 % OFF Efectivo// Transferencia</h5>
         </div>
 
         <div class="envio">
-            <img id="img-footer" src="../assets/icons/entrega.png" alt="">
+            <img class="img-footer" src="../assets/icons/entrega.png" alt="">
             <h2>ENVIOS A TODO EL PAIS</h2>
             <H5>En sucursales de Chilexpress</H5>
         </div>
 
         <div class="seguro">
-            <img id="img-footer" src="../assets/icons/pago-seguro.png" alt="">
+            <img class="img-footer" src="../assets/icons/pago-seguro.png" alt="">
             <h2>COMPRA SEGURA</h2>
             <H5>Políticas de cambios</H5>
         </div>
