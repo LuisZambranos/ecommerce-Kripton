@@ -80,29 +80,3 @@ document.addEventListener('DOMContentLoaded', () => {
     cartCount.innerText = ++count;
   };
 });
-
-
-// Funcion para el ocultar y mostrar el carrito de compras
-// Obtener elementos
-const cartIcon = document.getElementById("cart");
-const drawer = document.getElementById("cart-drawer");
-const backdrop = document.getElementById("cart-drawer-backdrop");
-const closeBtn = document.getElementById("cart-drawer-close");
-
-// Mostrar el drawer
-cartIcon.addEventListener("click", () => {
-  drawer.classList.add("show");
-  backdrop.classList.remove("hidden");
-});
-
-// Cerrar el drawer
-closeBtn.addEventListener("click", () => {
-  drawer.classList.remove("show");
-  backdrop.classList.add("hidden");
-});
-
-// También cerrar al hacer clic en el fondo oscuro
-backdrop.addEventListener("click", () => {
-  drawer.classList.remove("show");
-  backdrop.classList.add("hidden");
-});

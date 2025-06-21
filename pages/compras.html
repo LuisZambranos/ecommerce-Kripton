@@ -23,9 +23,9 @@
     <!-- Branding personalizado -->
     <header class="py-3 bg-dark text-white text-center">
         <div class="bar-nav d-flex justify-content-around align-items-center">
-            <h4 class="krip">Kripton</h4>
-            <h1 class="kripton-title">Kripton</h1>
-            <h4 class="krip">Kripton</h4>
+            <h4 class="krip shiny-text">Kripton</h4>
+            <h1 class="kripton-title pulse-glow">Kripton</h1>
+            <h4 class="krip shiny-text">Kripton</h4>
         </div>
 
     </header>
@@ -63,21 +63,21 @@
 
             <!-- Buscador de productos -->
             <div class="search-bar d-flex" role="search">
-                    <input
-                        id="search-input"
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Buscar productos"
-                        aria-label="Buscar"
-                    />
-                    <button
-                        class="btn-buscar"
-                        type="button"
-                        id="search-button"
-                    >
-                        Buscar
-                    </button>
-                </div>
+                <input
+                    id="search-input"
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar productos"
+                    aria-label="Buscar"
+                />
+                <button
+                    class="btn-buscar"
+                    type="button"
+                    id="search-button"
+                >
+                    Buscar
+                </button>
+            </div>
 
             <div id="cart" class="cart d-flex align-items-center gap-2">
                 <img id="carro" src="../assets/icons/carro-de-la-compra.png" alt="carrito" width="32">
@@ -94,33 +94,6 @@
     <div class="container-productos" id="product-list">
         <!-- Aquí se cargarán los productos dinámicamente -->
     </div>
-
-    <!-- Drawer BACKDROP (oscurece fondo) -->
-    <div id="cart-drawer-backdrop" class="drawer-backdrop hidden"></div>
-
-    <!-- Drawer PANEL lateral -->
-    <div id="cart-drawer" class="cart-drawer hidden">
-        <div class="cart-drawer-content">
-            
-            <!-- Encabezado con título y botón cerrar -->
-            <div class="cart-drawer-header">
-            <h2>Carrito</h2>
-            <button id="cart-drawer-close" class="cart-close">&times;</button>
-            </div>
-
-            <!-- Aquí se cargan dinámicamente los productos -->
-            <div id="cart-items" class="cart-items">
-            <!-- Los productos aparecerán aquí desde JavaScript -->
-            </div>
-
-            <!-- Pie con el total y botón de finalizar -->
-            <div class="cart-drawer-footer">
-            <p id="cart-total">Total: $0</p>
-            <button class="btn-checkout">Finalizar Compra</button>
-            </div>
-        </div>
-    </div>
-
 
     <div class="banner">
         <div class="metodo-pago">
@@ -143,7 +116,7 @@
     </div>
 
     <div class="footer">
-        <h2>Contacto</h2>
+        <h2 class="pulse-glow-text">Contacto</h2>
         <p>Para cualquier consulta o sugerencia, no dudes en contactarnos a través de nuestro correo electrónico: Kripton@gmail.com</p> 
     </div>
 
